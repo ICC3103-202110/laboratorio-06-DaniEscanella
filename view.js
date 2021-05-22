@@ -36,7 +36,7 @@ function view (model){
 }
 function listFormSource (model){
     const {source} = model
-    const message1 = 'Left temperature is the source?'  //yes/no
+    const message1 = 'Left temperature is source?'  //yes/no
     return inquirer.prompt({
         name : 'source',
         type : 'input',
