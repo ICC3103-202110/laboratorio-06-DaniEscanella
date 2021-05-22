@@ -1,4 +1,4 @@
-const {listFormL,listFormR,listFormSource, listForm} = require('./view')
+const {listFormL,listFormR,listFormSource} = require('./view')
 const {printTable} = require('console-table-printer')
 
 async function app (state,update,view) {
@@ -11,12 +11,12 @@ async function app (state,update,view) {
     const {source} = await listFormSource(model)
     //update source
     if (source=='yes'){
-        const{leftValue,leftUnit,rightUnit} = await listFormL
+        const{leftValue,leftUnit,rightUnit} = await listFormL(model)
         //update
     } else {
-        const{leftUnit,rightValue,rightUnit} = await listFormR
+        const{rightValue,rightUnit,leftUnit} = await listFormR(model)
     }
-    console.log(await listForm(model))
+    
 }
 
 module.exports = {

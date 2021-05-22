@@ -75,7 +75,7 @@ function listFormL (model) {
         name: 'rightUnit',
         type: 'list',
         message: message4,
-        default: rightValue,
+        default: rightUnit,
         choices: choices
     }])  
 }
@@ -93,16 +93,16 @@ function listFormR (model) {
         message: message2,
         default: rightValue
     },{
-        name: 'leftUnit',
-        type: 'list',
-        message: message3,
-        default: leftUnit,
-        choices: choices
-    },{
         name: 'rightUnit',
         type: 'list',
+        message: message3,
+        default: rightUnit,
+        choices: choices
+    },{
+        name: 'leftUnit',
+        type: 'list',
         message: message4,
-        default: rightValue,
+        default: leftUnit,
         choices: choices
     }])  
 }
